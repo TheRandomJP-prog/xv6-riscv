@@ -77,8 +77,7 @@ sys_kill(void)
   return kill(pid);
 }
 
-// return how many clock tick interrupts have occurred
-// since start.
+// return••••••••••••start.
 uint64
 sys_uptime(void)
 {
@@ -87,5 +86,15 @@ sys_uptime(void)
   acquire(&tickslock);
   xticks = ticks;
   release(&tickslock);
+  return xticks;
+}
+uint64(void)
+{
+  uint xticks;
+
+  acquire(&tickslock);
+  xticks = ticks;
+  release(&tickslock);
+  xticks /= CPUFREQ; //I believe that this is already in seconds
   return xticks;
 }
