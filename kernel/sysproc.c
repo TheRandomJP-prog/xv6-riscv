@@ -88,7 +88,8 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
-uint64(void)
+uint64
+sys_timeins(void)
 {
   uint xticks;
 
