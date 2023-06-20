@@ -20,6 +20,10 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+<<<<<<< HEAD
 #define SYS_ps     22
 #define SYS_setpriority     23
 
+=======
+#define SYS_timeins 22
+>>>>>>> 1f7ca6fd45b50b4142d6d1c2b00525bcde72c3ee
